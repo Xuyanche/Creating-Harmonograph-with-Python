@@ -1,3 +1,4 @@
+#这个程序主要比上一个添加了serial的功能，可以控制硬件
 import pygame
 import serial
 import math
