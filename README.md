@@ -7,4 +7,6 @@ serial官网：https://pythonhosted.org/pyserial/index.html
 注意：我使用的是Python3，并自己添加了pygame和serail组件。在Python2上能否成功我也不知道。
 
 ## Homonograph介绍
-homonograph是一类利用单摆的机械结构画出的图形
+homonograph是一类利用单摆的机械结构画出的图形。具体定义及相关信息  
+homograph维基：https://en.wikipedia.org/wiki/Homograph  
+
