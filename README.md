@@ -5,7 +5,7 @@
 ## Homonograph介绍
 homonograph是一类利用单摆的机械结构画出的图形。他们遵循同一类公式：  
 x(t)=A_{1}\sin(tf_{1}+p_{1})e^{-d_{1}t}+A_{2}\sin(tf_{2}+p_{2})e^{-d_{2}t}  
-y(t)=A_{3}\sin(tf_{3}+p_{3})e^{-d_{3}t}+A_{4}\sin(tf_{4}+p_{4})e^{-d_{4}t}  
+y(t)=A_{3}\sin(tf_{3}+p_{3})e^{-d_{3}t}+A_{4}\sin(tf_{4}+p_{4})e^{-d_{4}t}  
 通过调整其中A,p,d,p等参数就可以得到许多形态各异的Homonograph了。  
 具体定义及相关信息参见维基百科。  
 Homograph维基：https://en.wikipedia.org/wiki/Homograph
