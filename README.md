@@ -11,19 +11,21 @@ y(t)=A_{3}\sin(tf_{3}+p_{3})e^{-d_{3}t}+A_{4}\sin(tf_{4}+p_{4})e^{-d_{4}t}  
 Homograph维基：https://en.wikipedia.org/wiki/Homograph
 
 ## pygame与serial安装方法  
-两个组件的具体函数及用法请参考他们的官网。  
+两个组件的安装方法和具体函数及用法请参考他们的官网。  
 pygame官网：http://www.pygame.org/  
-serial官网：https://pythonhosted.org/pyserial/index.html  
-官网上有标准的
-注意：我使用的是Python3，并自己添加了pygame和serail组件。在Python2上能否成功我也不知道。
+serial官网：https://pythonhosted.org/pyserial/index.html  
+官网上有各种平台上的安装步骤。我是在win10的平台上运行的，其他平台上的方法也可以在这个网站上找到。  
+注意：我使用的是Python3，并自己添加了pygame和serail组件。如果是Python2，你的Python可能自带pygame的库。这时候可以在Python shell里输入：  
+
+    >>> import pygame
+    >>> print('pygame.ver')
+
+这样如果可以看到下面打出了pygame的版本号，就可以认为你的Python已经装好了pygame的库。比如我的Python就会回复我：
+
+    1.9.3
+    
+然而serial并不支持这个方法。所以在我的程序里还有一个专门用来检测你的serial是不是在运作。这个程序其实也很简陋，不过只是“检测serial是不是在运作”这种小事还是可以做到的。
 
 ## 所用硬件说明
-其实可以替代的有很多，这里只是列出我们使用的硬件罢了。 具体参考instructable的这个项目：http://www.instructables.com/id/Polargraph-Drawing-Machine/ 
-### 电子器件
-+ arduino
-主要是使用arduino的串口功能，所以说在可以在电脑上安装arduino的编程软件，这是最快速的为你的电脑装上arduino的串口驱动的方法
-+ 步进电机 * 2
-我们使用的是淘宝上卖的步进电机，一步1.8°。所使用的步进电机会影响到程序中pygame的显示与实际的换算公式。
-
-
-
+其实可以替代的有很多，这里只是列出我们使用的硬件罢了。 具体参考instructable的这个项目：http://www.instructables.com/id/Polargraph-Drawing-Machine/  
+其中，我们是使用了一套自动窗帘的齿轮和链子作为拉动笔的组件。步进电机则是在淘宝上卖的，一步是1.8°，如果电机和这里使用的不同，那么pygame界面上的位置和实际画出的位置换算时的公式就会受电影像。当然不只是这个，两个电极之间的距离也会对这个公式有影响。而至于后面的垫住纸的板子，我们用的是一张废弃的桌子的桌板。
