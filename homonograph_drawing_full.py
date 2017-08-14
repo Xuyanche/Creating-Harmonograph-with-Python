@@ -5,7 +5,7 @@ from pygame.locals import *
 from sys import exit
 import random
 
-#screen_and_board(mm)
+#屏幕和硬件实际参数都在这里设定
 screen_width = 1000
 screen_height = 1000
 color = (0, 0, 0)
@@ -14,7 +14,7 @@ board_height = 300
 addtional_height = 20
 step_length = 0.628
 
-#numbers_setting
+#Homonograph的参数在这里
 space = 0.25
 A1 = 200
 f1 = 1
@@ -33,7 +33,7 @@ p2 = 0.6
 p3 = 0.8
 p4 = 0.9
 
-#serail_setting
+#serail设定，这里是com3，波特率57600
 ser = serial.Serial('com3', 57600)
 def ready():
     while True:
@@ -49,7 +49,6 @@ def trans_left(a, b):
     step_left = int(math.sqrt(math.pow(x_b, 2) + math.pow(y_b , 2))/ step_length)
     return step_left
     
-
 def trans_right(a, b):
     x_b = board_length/2 - (a - screen_width/2)/3
     y_b = board_height + addtional_height + (b - screen_height/2)/3
@@ -85,6 +84,7 @@ while True:
     step_left = trans_left(screen_width/2, screen_height/2)
     step_right = trans_right(screen_width/2, screen_height/2)
     message0 = 'C09' + ',' + str(step_left)+ ',' + str(step_right) + ',END\n'
+    #由于起始的绘画点不在画面的正中心，所以需要先把笔移动到那个位置，把笔尖按出后再打一个y，程序会继续运行
     if ready():
         ser.write(message0.encode('utf-8'))
         start_x = screen_width/2 + A1 * math.sin(t * f1*math.pi/180 + p1) * math.exp(-1* d1* t) +\
@@ -118,6 +118,7 @@ while True:
                 
                 pygame.draw.line(screen, color, (start_x,start_y), (end_x, end_y),2)
                 if t >= 4000:
+                    #可以把这一次的pygame完成界面截图保存
                     pygame.image.save(screen, fname)
                     exit()
                 text_screen=my_font.render(fname, True, (255, 0, 0))
