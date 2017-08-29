@@ -22,7 +22,7 @@ serial官网：https://pythonhosted.org/pyserial/index.html
 
 这样如果可以看到下面打出了pygame的版本号，就可以认为你的Python已经装好了pygame的库。比如我的Python就会回复我：`1.9.3`
     
-然而serial并不支持这个方法。所以在还有一个简单的程序专门用来检测你的serial是不是在运作
+然而serial并不支持这个方法。所以在还有一个简单的程序专门用来检测你的serial是不是在运作。
 
 ## 所用硬件说明
 具体请参照instructable的这个项目：http://www.instructables.com/id/Polargraph-Drawing-Machine/  
