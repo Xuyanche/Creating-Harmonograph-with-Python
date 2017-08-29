@@ -64,15 +64,9 @@ fname = 'DL' +str(A1) +'-' +str(A2)+'-' +str(A3)+'-' +str(A4)+'-'\
         +str(p1)[:3]+'-' +str(p2)[:3]+'-' +str(p3)[:3]+'-' +str(p4)[:3]+'-' \
         +str(space) + '.png'
 
-print(fname)
 my_font=pygame.font.SysFont('arial',15)
-
-
 screen = pygame.display.set_mode((screen_width, screen_height))
-pygame.display.set_caption('Draw A Line')
-
-
-
+pygame.display.set_caption('Draw Drawing Full')
 
 t = 0
 while True:
@@ -115,12 +109,12 @@ while True:
                     message = 'C01' + ',' + str(step_left)+ ',' + str(step_right) + ',END\n'
                     ser.write(message.encode('utf-8'))
                 
-                
                 pygame.draw.line(screen, color, (start_x,start_y), (end_x, end_y),2)
                 if t >= 4000:
                     #可以把这一次的pygame完成界面截图保存
                     pygame.image.save(screen, fname)
                     exit()
+                #在屏幕上显示文件名称
                 text_screen=my_font.render(fname, True, (255, 0, 0))
                 screen.blit(text_screen, (50,50))
                 pygame.display.update()
