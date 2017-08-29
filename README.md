@@ -20,12 +20,20 @@ serial官网：https://pythonhosted.org/pyserial/index.html
     >>> import pygame
     >>> print('pygame.ver')
 
-这样如果可以看到下面打出了pygame的版本号，就可以认为你的Python已经装好了pygame的库。比如我的Python就会回复我：
-
-    1.9.3
+这样如果可以看到下面打出了pygame的版本号，就可以认为你的Python已经装好了pygame的库。比如我的Python就会回复我：`1.9.3`
     
-然而serial并不支持这个方法。所以在我的程序里还有一个专门用来检测你的serial是不是在运作。这个程序其实也很简陋，不过只是“检测serial是不是在运作”这种小事还是可以做到的。
+然而serial并不支持这个方法。所以在还有一个简单的程序专门用来检测你的serial是不是在运作
 
 ## 所用硬件说明
 具体请参照instructable的这个项目：http://www.instructables.com/id/Polargraph-Drawing-Machine/  
 很多部件是可以替换的，仅仅供大家参考。
+
+## 程序列表
+- test_serial.py  
+用于检测你的serial库是不是在运作
+- Harmonograph_drawing.py  
+在屏幕上用pygame画出harmonograph并保存其图片于工作目录中，文件名就是参数。
+- harmonograph_drawing_random.py  
+同上，但是所有参数都是随机设定的。
+- harmonograph_drawing_full.py  
+在harmonograph_drawing.py的基础上调用serial库，可以让你在纸上画出Harmonograph。
