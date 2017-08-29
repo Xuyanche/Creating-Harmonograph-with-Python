@@ -1,4 +1,5 @@
-#与harmonograph_drawing.py相同，不调用serial，但是所有参数都随机设定。可以用来找好看的图形
+#与harmonograph_drawing.py相同，不调用serial，但是所有参数都随机设定。可以用来找好看的图形。
+#和其他的一样，完成图会自动保存在运行目录里，文件名就是参数。
 import pygame
 import math
 from pygame.locals import *
@@ -36,12 +37,9 @@ fname = 'DL' +str(A1) +'-' +str(A2)+'-' +str(A3)+'-' +str(A4)+'-'\
         +str(p1)[:3]+'-' +str(p2)[:3]+'-' +str(p3)[:3]+'-' +str(p4)[:3]+'-' \
         +str(space) + '.png'
 
-print(fname)
 my_font=pygame.font.SysFont('arial',15)
-
-
 screen = pygame.display.set_mode((screen_width, screen_height))
-pygame.display.set_caption('Draw A Line')
+pygame.display.set_caption('Harmonograph_drawing_random')
 
 t = 0
 
